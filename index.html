@@ -3,6 +3,12 @@
 <head>
   <meta charset="utf-8">
   <meta name="viewport" content="width=device-width, initial-scale=1">
+  <script>
+    if (window.location.pathname.endsWith('/index.html')) {
+      const home = new URL('./', window.location.href);
+      window.history.replaceState(null, '', home.pathname + home.search + home.hash);
+    }
+  </script>
   <meta name="description" content="Zicheng Zhu studies AI for human mental well-being, especially social well-being, at Kyoto University.">
   <title>Zicheng Zhu</title>
   <link rel="stylesheet" href="https://cdnjs.cloudflare.com/ajax/libs/font-awesome/6.6.0/css/all.min.css">
